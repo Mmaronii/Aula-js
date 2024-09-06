@@ -1,0 +1,16 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid red;
+}
+div#res{
+    padding-top: 10px;
+}
+
+.btn{
+    border: none;
+    border-radius: 5px;
+    background: orange;
+}

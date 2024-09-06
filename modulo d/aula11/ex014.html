@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 12px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>De onde Você é?</h1>
+    Qual é a sua Nacionalidade: <input type="text" name="txtnal" id="txtnal">
+    <input id="bt" type="button" value="Verificar" onclick="pais()"> 
+    <div id="res"></div>
+    <script>
+        function pais(){
+            var p = document.getElementById('txtnal')
+            var r = document.getElementById('res')
+            r.innerHTML= `Seu país é o ${p.value}`
+            if (p.value == 'Brasil'){
+                r.innerHTML += `<p> Então você é Brasileiro</p>`
+            } else{
+                r.innerHTML += `<p> Então você é estrangeiro</p>`
+            }
+        }
+    </script>
+</body>
+</html>

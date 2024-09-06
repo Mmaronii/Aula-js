@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navegação e Menus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .menu {
+            width: 200px;
+            border: 1px solid #ccc;
+            margin: 20px;
+            padding: 0;
+            list-style: none;
+        }
+        .menu-item {
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+        }
+        .submenu {
+            display: none;
+            list-style: none;
+            padding-left: 20px;
+        }
+        .submenu-item {
+            padding: 8px;
+            background-color: #e9e9e9;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <ul class="menu">
+        <li class="menu-item" onclick="toggleSubmenu('submenu1')">Menu 1</li>
+        <ul id="submenu1" class="submenu">
+            <li class="submenu-item">Submenu 1.1</li>
+            <li class="submenu-item">Submenu 1.2</li>
+            <li class="submenu-item">Submenu 1.3</li>
+        </ul>
+        <li class="menu-item" onclick="toggleSubmenu('submenu2')">Menu 2</li>
+        <ul id="submenu2" class="submenu">
+            <li class="submenu-item">Submenu 2.1</li>
+            <li class="submenu-item">Submenu 2.2</li>
+            <li class="submenu-item">Submenu 2.3</li>
+        </ul>
+        <li class="menu-item" onclick="toggleSubmenu('submenu3')">Menu 3</li>
+        <ul id="submenu3" class="submenu">
+            <li class="submenu-item">Submenu 3.1</li>
+            <li class="submenu-item">Submenu 3.2</li>
+            <li class="submenu-item">Submenu 3.3</li>
+        </ul>
+    </ul>
+
+    <script>
+        function toggleSubmenu(id) {
+            var submenu = document.getElementById(id);
+            if (submenu.style.display === "none" || submenu.style.display === "") {
+                submenu.style.display = "block";
+            } else {
+                submenu.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
